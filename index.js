@@ -18,3 +18,11 @@ toggleButton.addEventListener("click", () => {
         toggleButton.textContent = "🌙 Dark Mode";
     }
 });
+
+// If you have a manual dark mode toggle
+const darkModeToggle = document.querySelector('#darkModeToggle');
+darkModeToggle.addEventListener('click', () => {
+  document.documentElement.setAttribute('data-theme', 
+    document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
+  );
+});

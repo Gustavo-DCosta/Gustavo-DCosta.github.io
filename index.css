@@ -1,14 +1,25 @@
-/* Default Light Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: rgba(24, 24, 24);
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+    margin: 0;
     color: black;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Dark Mode */
-body.dark-mode {
-    background-color: #121212;
-    color: white;
+h1, p {
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 30px;
 }
 
 #theme-toggle {
@@ -28,73 +39,73 @@ body.dark-mode {
     background-color: #f39c12;
 }
 
-* {
+.credentials {
+    width: 400px;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 8px;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgb(93, 86, 25);*/
+    position: absolute;
+    left: 0;
+    top: 187px;
 }
 
-body {
-    background-color: rgb(255, 255, 255);
-    font-family: Arial, sans-serif;
-    margin: 0;
+.credentials p {
+    font-size: 15px;
+    margin: 12px 0;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
 }
 
-body.dark-mode h1, body.dark-mode p {
-    color: rgb(255, 255, 255);
+.credentials p:hover {
+    background-color: #28352f;
 }
 
-h1, p {
-    color: rgba(0, 0, 0, 0.8);
-    text-align: center;
-    margin: 20px 0; /* Avoid large margins */
+.credentials a {
+    color: #007bff;
+    text-decoration: none;
 }
 
-p{
-    font-size: 30px;
+.credentials a:hover {
+    text-decoration: underline;
 }
 
+/* Profile Section */
 .profile-photo {
     display: block;
-    margin: 20px auto; /* Center image */
+    margin: 20px auto;
     width: 250px;
     height: 200px;
     border-radius: 20%;
     object-fit: cover;
     position: relative;
-    z-index: 2; /* Ensure it's above the square */
+    z-index: 2;
 }
 
 .square {
     width: 100%;
     height: 150px;
     background-color: rgba(203, 137, 4, 0.619);
-    position: relative; 
-    margin-top: -150px; 
+    position: relative;
+    margin-top: -150px;
     z-index: -1;
 }
 
 .frame {
     height: 440px;
-    border: 2px solid black; /* Keep the border */
     flex-grow: 1;
     width: 90%;
     max-width: 100%;
     margin: 0 auto;
-    background-color: white; /* Light mode default */
+    background-color: white;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     transition: background-color 0.3s ease;
 }
-
-/* Dark mode for frame */
-body.dark-mode .frame {
-    background-color: #1e1e1e; /* Dark background */
-    border-color: white;
-}
-
 
 table {
     width: 100%;
@@ -108,19 +119,56 @@ th, td {
     text-align: left;
 }
 
-/* Light Mode Table */
 th {
-    background-color: rgba(85, 243, 240, 0.3); /* Semi-transparent cyan */
+    background-color: rgba(85, 243, 240, 0.3);
+    color: rgb(24, 24, 24);
+}
+
+.table-img {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Social Media Icons */
+.fa-github {
     color: black;
 }
 
-/* Dark Mode Table */
+.fa-instagram {
+    color: black;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode h1,
+body.dark-mode p {
+    color: rgb(255, 255, 255);
+}
+
+body.dark-mode .frame {
+    background-color: #1e1e1e;
+    border-color: white;
+}
+
 body.dark-mode th {
-    background-color: rgba(85, 243, 240, 0.2); /* Slightly darker in dark mode */
+    background-color: rgba(85, 243, 240, 0.2);
     color: white;
 }
 
 body.dark-mode td {
-    background-color: #222; /* Darker for better contrast */
+    background-color: rgb(24, 24, 24);
     color: white;
+}
+
+body.dark-mode .fa-github,
+body.dark-mode .fa-instagram {
+    color: cyan;
 }
