@@ -11,7 +11,6 @@ body.dark-mode {
     color: white;
 }
 
-/* Style the toggle button */
 #theme-toggle {
     position: fixed;
     top: 10px;
@@ -36,9 +35,13 @@ body.dark-mode {
 }
 
 body {
-    background-color: rgba(24, 24, 24);
+    background-color: rgb(255, 255, 255);
     font-family: Arial, sans-serif;
     margin: 0;
+}
+
+body.dark-mode h1, body.dark-mode p {
+    color: rgb(255, 255, 255);
 }
 
 h1, p {
@@ -73,17 +76,25 @@ p{
 
 .frame {
     height: 440px;
-    border : black 2px solid; /*added to visualize the size of .frame*/
+    border: 2px solid black; /* Keep the border */
     flex-grow: 1;
     width: 90%;
     max-width: 100%;
     margin: 0 auto;
-    background-color: white;
+    background-color: white; /* Light mode default */
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    transition: background-color 0.3s ease;
 }
+
+/* Dark mode for frame */
+body.dark-mode .frame {
+    background-color: #1e1e1e; /* Dark background */
+    border-color: white;
+}
+
 
 table {
     width: 100%;
@@ -92,11 +103,24 @@ table {
 }
 
 th, td {
-    border: 1px solid #273b38; /* This is the border of the table */
-    padding: 8px;   
-    text-align: left;   
+    border: 1px solid #273b38;
+    padding: 8px;
+    text-align: left;
 }
 
+/* Light Mode Table */
 th {
-    background-color: #55f3f04d;  /* first colum */
+    background-color: rgba(85, 243, 240, 0.3); /* Semi-transparent cyan */
+    color: black;
+}
+
+/* Dark Mode Table */
+body.dark-mode th {
+    background-color: rgba(85, 243, 240, 0.2); /* Slightly darker in dark mode */
+    color: white;
+}
+
+body.dark-mode td {
+    background-color: #222; /* Darker for better contrast */
+    color: white;
 }
