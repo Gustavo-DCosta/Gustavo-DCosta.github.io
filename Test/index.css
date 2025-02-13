@@ -1,0 +1,41 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.frame {
+    height: auto; /* Adjusted for vertical layout */
+    border: black 2px solid; /* Added to visualize the size of .frame */
+    flex-grow: 1;
+    width: 90%;
+    max-width: 100%;
+    margin: 20px auto; /* Added margin for spacing */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 20%;
+}
+
+th, td {
+    border: 1px solid #273b38; /* This is the border of the table */
+    padding: 8px;
+    text-align: left; /* Align text to the left */
+}
+
+thead {
+    background-color: #e2e2e2; /* Added background color for header */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping for rows */
+}
