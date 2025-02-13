@@ -1,0 +1,13 @@
+body {
+    background-color: aquamarine;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.profile-photo {
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    right: 10px;
+}
