@@ -1,3 +1,10 @@
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -133,13 +140,22 @@ th {
     margin: 0 auto;
 }
 
+.fa-people-group{
+    color: rgb(0, 0, 0);
+}
+
+.fa-briefcase {
+    color: rgb(0, 0, 0);
+}
 /* Social Media Icons */
 .fa-github {
     color: black;
+    margin: 0;
 }
 
 .fa-instagram {
     color: black;
+    margin: 0;
 }
 
 /* Dark Mode Styles */
