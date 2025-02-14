@@ -43,7 +43,7 @@ p {
 }
 
 #theme-toggle:hover {
-    background-color: #28a745;
+    background-color: rgb(40, 167, 69);
 }
 
 .credentials {
@@ -80,8 +80,6 @@ p {
     margin: 0;
     padding: 10px;
     border-radius: 8px;
-    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: rgb(93, 86, 25);*/
     position: absolute;
     right: 0;
     top: 187px;
@@ -102,6 +100,41 @@ p {
 .aboutme a {
     color: #007bff;
     text-decoration: none;
+}
+
+.info {
+    width: 200px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 0px; /* Default text color for bright mode */
+}
+
+.info p {
+    font-size: 15px;
+    margin: 12px 0;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.info p:hover {
+    background-color: #28352f;
+}
+
+.info a {
+    color:  rgb(0, 0, 0);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+body.dark-mode .info a{
+    color: white;  
+}
+
+body.dark-mode .info p:hover {
+    background-color: #28352f;  /*This can be changed, it works*/
 }
 
 /* Profile Section */
@@ -166,6 +199,13 @@ th {
 }
 
 /* Icons */
+
+.fa-laptop {
+    color : rgb(0, 0, 0);
+}
+.fa-code {
+    color : rgb(0, 0, 0);
+}
 .fa-envelope-open-text {
     color: rgb(0, 0, 0);
 }
@@ -229,4 +269,10 @@ body.dark-mode td {
 body.dark-mode .fa-github,
 body.dark-mode .fa-instagram {
     color: cyan;
+}
+
+body.dar-mode .fa-download,
+body.dark-mode .fa-code,
+body.dark-mode .fa-laptop {
+    color: rgb(255, 255, 255);
 }
