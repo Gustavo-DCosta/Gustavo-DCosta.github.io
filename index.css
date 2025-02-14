@@ -34,7 +34,7 @@ p {
     top: 10px;
     right: 10px;
     padding: 10px 15px;
-    background-color: #f1c40f;
+    background-color: #28a745;
     border: none;
     cursor: pointer;
     font-size: 16px;
@@ -43,7 +43,7 @@ p {
 }
 
 #theme-toggle:hover {
-    background-color: #f39c12;
+    background-color: #28a745;
 }
 
 .credentials {
@@ -75,8 +75,33 @@ p {
     text-decoration: none;
 }
 
-.credentials a:hover {
-    text-decoration: underline;
+.aboutme {
+    width: 500px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 8px;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgb(93, 86, 25);*/
+    position: absolute;
+    right: 0;
+    top: 187px;
+}
+
+.aboutme p {
+    font-size: 15px;
+    margin: 12px 0;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.aboutme p:hover {
+    background-color: #28352f;
+}
+
+.aboutme a {
+    color: #007bff;
+    text-decoration: none;
 }
 
 /* Profile Section */
@@ -140,6 +165,23 @@ th {
     margin: 0 auto;
 }
 
+/* Icons */
+.fa-envelope-open-text {
+    color: rgb(0, 0, 0);
+}
+
+.fa-user {
+    color: rgb(0, 0, 0);
+}
+
+.fa-graduation-cap {
+    color: rgb(0, 0, 0);
+}
+
+.fa-school {
+    color: rgb(0, 0, 0);
+}
+
 .fa-people-group{
     color: rgb(0, 0, 0);
 }
@@ -147,7 +189,7 @@ th {
 .fa-briefcase {
     color: rgb(0, 0, 0);
 }
-/* Social Media Icons */
+
 .fa-github {
     color: black;
     margin: 0;
