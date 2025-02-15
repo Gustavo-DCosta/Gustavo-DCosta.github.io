@@ -2,51 +2,159 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="index.css"> <!-- Linking CSS file -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gustavo-dacosta</title>
+    <link rel="icon" type="image/x-icon" href="School_ID/website logo.png">
+    <link rel="stylesheet" href="index.css"> 
+    <script src="index.js" defer></script> 
+    <script src="https://kit.fontawesome.com/e12d7b97bc.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <button id="theme-toggle">🌞 Toggle Theme 🌙</button>
     <h1>Welcome to My Website</h1>
-    <p>Hi, I'm Gustavo, a cybersecurity and development enthusiast learning C and C++!</p>
-    <img src="School_ID/TEST_IMAGE.jpg" alt="Profile Photo" class="profile-photo">
-    <div class="square"></div>
+    <p>Hi, I'm Gustavo, a cybersecurity and development enthusiast</p>
+    <img src="photos/GitHubprofile1.JPG" alt="Profile Photo" class="profile-photo">
+    <div class="banner"></div>
+    <div class="credentials"> <!-- section of left side in the banner -->
+        <p> 
+            <i class="fa-brands fa-linkedin"></i>
+            <a> Linkedin profile</a>
+        </p>
+        <p> 
+            <a href="https://github.com/Gustavo-DCosta" target="_blank">
+                <i class="fa-brands fa-github"></i> GitHub profile
+            </a>
+        </p>
+        <p> 
+            <i class="fa-solid fa-envelope-open-text"></i>
+            <a href="mailto:gdacostapereira66@gmail.com">gdacostapereirea66@gmailil.com</a>
+        </p>
+    </div>  <!-- THIS SECTION FURTHER UP IS ALL GOOD DO NOT TOUCH IT-->
+    <div class="aboutme"> <!-- section of right side in the banner -->
+        <p>
+            <i class="fa-solid fa-school"></i>
+            <a>I'm currently a student at Chaptal High School Saint-Brieuc <br></a>
+        </p>
+        <p>
+            <i class="fa-solid fa-graduation-cap"></i>
+            <a>1st Year Technology and Engineering, specializing in Sustainable Development (STI2D - French Technical High School Program)<br></a>
+        </p>
+        <p>
+            <i class="fa-solid fa-user"></i>
+            <a>I am 17 years old, 11th grade</a>
+        </p>
+    </div> <!-- ALL GOOD HERE TOO DON'T TOUCH IT-->
+    <div class="SocialMedia">
+        <p> 
+            <a href="https://www.instagram.com/gustavo_dacostap" target="_blank">
+                <i class="fa-brands fa-instagram"></i> Instagram profile
+            </a>
+        </p>
+        <p>
+            <a href="https://www.facebook.com" target="_blank"">
+                <i class="fa-brands fa-facebook"></i> Facebook profile
+            </a>
+        </p>        
+        <p>
+            <i class="fa-solid fa-download"></i>
+            <a href="photos/Cv Gustavo stage4.pdf" download="Gustavo resume">Download my resume</a>
+        </p>
+    </div>
+    <div class="searchbar">
+        <form action="/search" method="get">
+            <input type="text" name="query" placeholder="Search...">
+            <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+    </div>    
+    <div class="table-container">
+        <table class="skills-table">
+            <tr>
+                <td>
+                    <img src="photos/githublogo.png" class="table-img" style="width: 150px; height: 150px;">
+                </td>
+                <td>
+                    <img src="photos/VsCodelogo.jpg" class="table-img" style="width: 150px; height: 150px;">
+                </td>
+                <td>
+                    <img src="photos/CLion_logo.png" class="table-img" style="width: 150px; height: 150px;">
+                </td>
+                <td>
+                    <img src="photos/OS-Linux-icon.png" class="table-img" style="width: 150px; height: 150px;">
+                </td>
+                <td>
+                    <img src="photos/Windows.png" class="table-img" style="width: 150px; height: 150px;">
+                </td>
+                <td>
+                    <img src="photos/Vbox.png" class="table-img" style="width: 150px; height: 150px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="photos/C_language.png" class="table-img" style="width: 150px; height: 150px;">
+                </td>
+                <td>
+                    <img src="photos/C++_language.png" class="table-img" style="width: 150px; height: 150px;">
+                </td>
+                <td>
+                    <img src="photos/python.png" class="table-img" style="width: 150px; height: 150px;">
+                </td>
+                <td>
+                    <img src="photos/HTML.png" class="table-img" style="width: 150px; height: 150px;">
+                </td>
+                <td>
+                    <img src="photos/CSS.png" class="table-img" style="width: 150px; height: 150px;">
+                </td>
+                <td>
+                    <img src="photos/nodeJS.png" class="table-img" style="width: 250px; height: 150px;">
+                </td>
+            </tr>  
+        </table>
+    </div>
     <div class="frame">
         <table>
-            <thead>
-                <tr>
-                    <th>Project Name</th>
-                    <th>Description</th>
-                    <th>Technology Used</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Project 1</td>
-                    <td>A brief description of Project 1.</td>
-                    <td>HTML, CSS, JavaScript</td>
-                    <td><a href="https://link-to-project1.com">View Project</a></td>
-                </tr>
-                <tr>
-                    <td>Project 2</td>
-                    <td>A brief description of Project 2.</td>
-                    <td>Python, Flask</td>
-                    <td><a href="https://link-to-project2.com">View Project</a></td>
-                </tr>
-                <tr>
-                    <td>Project 3</td>
-                    <td>A brief description of Project 3.</td>
-                    <td>Java, Spring</td>
-                    <td><a href="https://link-to-project3.com">View Project</a></td>
-                </tr>
-                <tr>
-                    <td>Project 4</td>
-                    <td>A brief description of Project 4.</td>
-                    <td>C++, Qt</td>
-                    <td><a href="https://link-to-project4.com">View Project</a></td>
-                </tr>
-            </tbody>
+            <tr>
+              <th>cloudSim</th>
+              <th>Portfolio</th>
+            </tr>
+            <tr>
+              <td>CloudSim – A C++ CLI Cloud Storage App CloudSim is a cloud-based file storage system written in C++. It allows users to securely store and manage files with authentication and logging features.</td>
+              <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero corporis facilis enim natus ab eligendi error cupiditate placeat rem consequatur ex pariatur repellat, quaerat laboriosam in.</td>
+            </tr>
+            <tr>
+              <td>🚀 Features <br> ✅ Secure authentification features (hashing + salting)<br>
+                ✅ Log files for tracking activity<br> 
+                ✅ File storage<br>
+
+                🛠 Tech Stack C++ <br>
+                (Core development) <br>
+                SQLite3 library File I/O for storage Database content Encryption</td>
+              <td>JavaScript <br>
+                CSS <br>
+                HTML</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://github.com/Gustavo-DCosta/cloudSim" target="_blank">
+                        <i class="fa-brands fa-github fa-2x"></i>
+                    </a>
+                </td>
+                <td>
+                    <a href="https://github.com/Gustavo-DCosta/Gustavo-DCosta.github.io" target="_blank">
+                        <i class="fa-brands fa-github fa-2x"></i>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="photos/cloudSim logo.jpeg" alt="cloudSim logo" class="table-img">
+                </td>
+                <td>
+                    <img src="photos/TEST_IMAGE.jpg" alt="Profile Photo" class="table-img">
+                </td>
+                
+            </tr>
         </table>
     </div>
 </body>

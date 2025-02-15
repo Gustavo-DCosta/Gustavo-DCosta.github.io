@@ -1,41 +1,344 @@
+/*COLORS PALLETE, WHITE, BLACK, BLUE, ORANGE, YELLOW, GREY, BROWN*/
 
-body {
-    font-family: Arial, sans-serif;
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, p {
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 30px;
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: rgb(40, 167, 69);
+}
+
+.searchbar {
+    position: fixed;
+    top: 60px; /* Adjust position below theme toggle */
+    right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.searchbar form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.searchbar input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 250px;
+}
+
+.searchbar button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar button i {
+    border-radius: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.credentials {
+    width: 400px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    top: 40%; /* Adjust this value to position it vertically within the banner */
+    transform: translateY(-50%); /* Center it vertically */
+}
+
+.credentials p {
+    font-size: 15px;
+    margin: 12px 0;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.credentials p:hover {
+    background-color: #28352f;
+}
+
+.credentials a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.aboutme {
+    width: 500px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 8px;
+    position: absolute;
+    right: 0;
+    top: 187px;
+    top: 40%; /* Adjust this value to position it vertically within the banner */
+    transform: translateY(-50%);
+}
+
+.aboutme p {
+    font-size: 15px;
+    margin: 12px 0;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.aboutme p:hover {
+    background-color: #28352f;
+}
+
+.aboutme a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.SocialMedia {
+    width: 200px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 8px;
+    position: absolute;
+    top: 0px;
+    left: 0px; /* Default text color for bright mode */
+}
+
+.SocialMedia p {
+    font-size: 15px;
+    margin: 12px 0;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.SocialMedia p:hover {
+    background-color: #28352f;
+}
+
+.SocialMedia a {
+    color:  rgb(0, 0, 0);
+    font-size: 15px;
+    text-decoration: none;
+}
+
+body.dark-mode .SocialMedia a {
+    color: white;  /* Text color for dark mode */
+}
+
+body.dark-mode .info a{
+    color: white;  
+}
+
+body.dark-mode .info p:hover {
+    background-color: #28352f;  /*This can be changed, it works*/
+}
+
+/* Profile Section */
+.profile-photo {
+    display: block;
+    margin: 20px auto;
+    width: 250px;
+    height: 200px;
+    border-radius: 20%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+.banner {
+    width: 100%;
+    height: 150px;
+    background-color: rgba(251, 168, 4, 0.619);
+    position: relative;
+    margin-top: -150px;
+    margin-bottom: 10px;
+    z-index: -1;
+}
+
+
+.table-container {
+    width: 90%;
+    height: auto;  /* Let it grow based on content */
+    background-color: #FAE3B0;  /* Shadow effect */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 15px 20px rgb(69, 69, 69); /* Soft shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden;
+}
+
+.skills-table td {
+    background-color: rgb(255, 255, 255);  /* Table background */
+    padding: 10px;
+    text-align: center;
 }
 
 .frame {
-    height: auto; /* Adjusted for vertical layout */
-    border: black 2px solid; /* Added to visualize the size of .frame */
-    flex-grow: 1;
     width: 90%;
-    max-width: 100%;
-    margin: 20px auto; /* Added margin for spacing */
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 300px;
+    /*border: 1px solid #ccc;*/
+    border-radius: 10px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 150px; /* Add more space above the frame */
+    margin-bottom: 20px;
 }
 
-table {
+.frame td, th {
+    border: 1px solid #273b38;
+    padding: 8px;
+    text-align: left;
+}
+
+.frame th {
+    background-color: rgba(85, 243, 240, 0.3);
+    color: rgb(24, 24, 24);
+}
+
+.table-img {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Icons */
+
+
+.fa-linkedin,
+.fa-laptop,
+.fa-code,
+.fa-envelope-open-text,
+.fa-user,
+.fa-graduation-cap,
+.fa-school,
+.fa-people-group,
+.fa-briefcase,
+.fa-github,
+.fa-instagram {
+    color: black;
+    margin: 0;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode h1,
+body.dark-mode p {
+    color: rgb(255, 255, 255);
+}
+
+body.dark-mode .table-container {
+    background-color: #000000;
+    box-shadow: 0px 15px 20px rgb(255, 38, 0);
+}
+
+body.dark-mode .skills-table {
     width: 100%;
     border-collapse: collapse;
-    border-radius: 20%;
+    background-color: rgb(0, 0, 0);  /* Table background */ 
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden;
 }
 
-th, td {
-    border: 1px solid #273b38; /* This is the border of the table */
-    padding: 8px;
-    text-align: left; /* Align text to the left */
+body.dark-mode .skills-table td {
+    background-color: rgb(27, 27, 27);  /* Table background */
+    padding: 10px;
+    text-align: center;
 }
 
-thead {
-    background-color: #e2e2e2; /* Added background color for header */
+body.dark-mode .frame {
+    border-color: white;
 }
 
-tbody tr:nth-child(even) {
-    background-color: #f9f9f9; /* Zebra striping for rows */
+body.dark-mode th {
+    background-color: rgba(85, 243, 240, 0.2);
+    color: white;
+}
+
+body.dark-mode td {
+    background-color: rgb(24, 24, 24);
+    color: white;
+}
+
+body.dark-mode .frame .fa-github,
+body.dark-mode .fa-instagram,
+body.dar-mode .fa-download,
+body.dark-mode .fa-code,
+body.dark-mode .fa-laptop {
+    color: rgb(255, 255, 255);
 }
