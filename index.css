@@ -254,14 +254,12 @@ body.dark-mode .info p:hover {
 }
 
 .frame td, th {
-    border: 1px solid #273b38;
     padding: 8px;
     text-align: left;
 }
 
 .frame th {
     background-color: rgba(85, 243, 240, 0.3);
-    color: rgb(24, 24, 24);
 }
 
 .table-img {
