@@ -253,12 +253,14 @@ body.dark-mode .info p:hover {
     margin-bottom: 20px;
 }
 
+/*
 .frame td, th {
     border-radius: 10px;
     padding: 8px;
     text-align: left;
 }
 
+*/
 
 .table-img {
     width: 300px;
