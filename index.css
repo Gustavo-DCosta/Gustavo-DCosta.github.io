@@ -259,6 +259,7 @@ body.dark-mode .info p:hover {
     text-align: left;
 }
 
+
 .table-img {
     width: 300px;
     height: 150px;
@@ -299,7 +300,7 @@ body.dark-mode p {
 
 body.dark-mode .table-container {
     background-color: #000000;
-    box-shadow: 0px 15px 20px rgb(255, 38, 0);
+    box-shadow: 0px 15px 20px rgba(74, 71, 71, 0.502);
 }
 
 body.dark-mode .skills-table {
@@ -317,7 +318,6 @@ body.dark-mode .skills-table td {
 }
 
 body.dark-mode .frame {
-    background-color: #1e1e1e;
     border-color: white;
 }
 
@@ -327,7 +327,7 @@ body.dark-mode th {
 }
 
 body.dark-mode td {
-    background-color: rgb(24, 24, 24);
+    background-color: rgb(27, 27, 27);
     color: white;
 }
 
