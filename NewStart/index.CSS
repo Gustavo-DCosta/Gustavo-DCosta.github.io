@@ -156,51 +156,111 @@ body {
 
 .table-container {
     width: 90%;
-    height: auto;  /* Let it grow based on content */
-    background-color: #F7F1E3;  /* Shadow effect */
+    height: auto;
+    background-color: #F7F1E3;
     padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 15px 20px rgb(69, 69, 69); /* Soft shadow */
+    border-radius: 10px;
+    box-shadow: 0px 15px 20px rgba(69, 69, 69, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.table-container {
-    width: 90%;
-    height: auto;  /* Let it grow based on content  */
-    background-color: #F7F1E3;   /* Shadow effect */
-    padding: 20px;
-    border-radius: 10px;  /* Rounded corners 
-    box-shadow: 0px 15px 20px rgb(69, 69, 69);  Soft shadow */
+.text-and-table-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    width: 100%;
+    gap: 20px; /* Space between elements */
+}
+
+.left-text, .right-text {
+    flex: 1;
+    font-size: 45px;
+    color: #0d80e48c;
+    font-weight: bold;
+}
+
+.left-text {
+    text-align: right;
+}
+
+.right-text {
+    color: #0d80e48c !important;
+    font-size: 45px !important;
+    text-align: left;
+}
+
+.table-wrapper {
+    flex: 2;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.457);
+    padding: 15px;
+    background: white;
 }
 
 .skills-table {
     width: 100%;
     border-collapse: collapse;
-    border-radius: 8px;  /* Rounded corners */
-    overflow: hidden;
 }
 
 .skills-table td {
-    background-color: #F7F1E3;  
+    background-color: #F7F1E3;
     padding: 10px;
     text-align: center;
 }
 
-    /*dark mode*/
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-body.dark-mode .table-container {
-    background-color: #333333;
+.table-img {
+    width: 100px;
+    height: auto;
+}
+
+
+.tab {
+    width: 100px;
+    height: 10px;
+    margin-top: 5px;
+    background-color: rgba(216, 125, 50, 0.715); /* Light transparent background */
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+    /*dark mode*/
+body.dark-mode .right-text {
+    color: #ad945e !important;
+    font-size: 45px !important;
+}
+
+body.dark-mode .left-text, .right-text {
+    flex: 1;
+    font-size: 45px;
+    color: #ad945e;
+    font-weight: bold;
+}
+
+body.dark-mode .table-wrapper {
+    box-shadow: 0px 10px 15px rgba(97, 95, 95, 0.635);
+    background-color: #463b3bb1;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 15px;
+}
+
+body.dark-mode .table-container { 
+    background-color: #4b4b4bb1;
     color: white;
 }
 
-body.dark-mode .skills-table td {
+body.dark-mode .skills-table td {  /* Icons box */    
     background-color: #4b4b4bb1;
     color: white;
 }
