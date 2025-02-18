@@ -1,10 +1,20 @@
-/*COLORS PALLETE, WHITE, BLACK, BLUE, ORANGE, YELLOW, GREY, BROWN*/
+#theme-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-left: auto;
+    background-color: #dab35d;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    /* Removed margin-left: auto since it's now inside the navigation bar */
+}
 
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
+#theme-toggle:hover {
+    background-color: #ad945e;
 }
 
 * {
@@ -18,124 +28,112 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(255, 255, 255);
+    background-color: #F7F1E3;
     font-family: Arial, sans-serif;
     margin: 0;
     color: black;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, p {
-    color: rgba(0, 0, 0, 0.8);
-    text-align: center;
-    margin: 20px 0;
+.image-container {
+    background-color: aqua;
+    width: 100%;
+    height: 200px; /* Change after for 100vh*/
+    position: absolute;
+    top: 0;
+    z-index: -1;
 }
 
-p {
-    font-size: 30px;
+.background-image {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('photos/BrightMode-background-image.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1; 
 }
 
-#theme-toggle {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    padding: 10px 15px;
-    background-color: #28a745;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-#theme-toggle:hover {
-    background-color: rgb(40, 167, 69);
-}
-
-.searchbar {
-    position: fixed;
-    top: 60px; /* Adjust position below theme toggle */
-    right: 10px;
+.navigation-bar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-}
-
-.searchbar form {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.searchbar input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
+    width: 40%;
+    margin-left: auto; /* This pushes the element to the right */
+    padding: 1rem;
     border-radius: 20px;
+    background-color: #ac9a8b;
+    color: black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.banner {
+    width: 100%;
+    height: 175px;
+    background-color: #E6D5C7;
+    position: relative;
+    margin-top: 225px;
+    margin-bottom: 10px;
+    z-index: -1;
+    display: flex;
+    justify-content: center; /* Center all elements */
+    align-items: center;
+    gap: 40px; /* Space between sections */
+}
+
+.profile-photo {
     width: 250px;
-}
-
-.searchbar button {
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.searchbar button i {
-    border-radius: 20px;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
+    height: 200px;
+    border-radius: 20%;
+    object-fit: cover;
+    position: absolute; /* Position it freely */
+    top: -50px; /* Move it up by 50px to create the 25% overlap */
+    left: 50%;
+    transform: translateX(-50%); /* Centers it exactly */
+    z-index: 2; /* Keeps it above the banner */
 }
 
 .credentials {
-    width: 400px;
-    margin: 0;
+    width: 500px;
     padding: 10px;
     border-radius: 8px;
-    position: absolute;
-    left: 0;
-    top: 40%; /* Adjust this value to position it vertically within the banner */
-    transform: translateY(-50%); /* Center it vertically */
+    text-align: center; /* Ensures text inside is centered */
+    gap: 8px; /* Adds spacing between elements */
 }
 
 .credentials p {
-    font-size: 15px;
+    font-size: 20px;
     margin: 12px 0;
     padding: 8px;
     border-radius: 4px;
     transition: background-color 0.2s;
 }
 
+
 .credentials p:hover {
-    background-color: #28352f;
+    border-radius: 4px;
+    background-color: #a8bdb3;
 }
 
 .credentials a {
-    color: #007bff;
+    color: #333333;
     text-decoration: none;
 }
 
-.aboutme {
+.aboutme {  
     width: 500px;
-    margin: 0;
     padding: 10px;
     border-radius: 8px;
-    position: absolute;
-    right: 0;
-    top: 187px;
-    top: 40%; /* Adjust this value to position it vertically within the banner */
-    transform: translateY(-50%);
+    text-align:center;
 }
 
-.aboutme p {
-    font-size: 15px;
+.aboutme p {    /* #40514E */
+    font-size: 20px;
     margin: 12px 0;
     padding: 8px;
     border-radius: 4px;
@@ -143,136 +141,287 @@ p {
 }
 
 .aboutme p:hover {
-    background-color: #28352f;
+    background-color: #a8bdb3;
 }
 
 .aboutme a {
-    color: #007bff;
-    text-decoration: none;
+    color: #333333;
 }
-
-.SocialMedia {
-    width: 200px;
-    margin: 0;
-    padding: 10px;
-    border-radius: 8px;
-    position: absolute;
-    top: 0px;
-    left: 0px; /* Default text color for bright mode */
-}
-
-.SocialMedia p {
-    font-size: 15px;
-    margin: 12px 0;
-    padding: 8px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-}
-
-.SocialMedia p:hover {
-    background-color: #28352f;
-}
-
-.SocialMedia a {
-    color:  rgb(0, 0, 0);
-    font-size: 15px;
-    text-decoration: none;
-}
-
-body.dark-mode .SocialMedia a {
-    color: white;  /* Text color for dark mode */
-}
-
-body.dark-mode .info a{
-    color: white;  
-}
-
-body.dark-mode .info p:hover {
-    background-color: #28352f;  /*This can be changed, it works*/
-}
-
-/* Profile Section */
-.profile-photo {
-    display: block;
-    margin: 20px auto;
-    width: 250px;
-    height: 200px;
-    border-radius: 20%;
-    object-fit: cover;
-    position: relative;
-    z-index: 2;
-}
-
-.banner {
-    width: 100%;
-    height: 150px;
-    background-color: rgba(251, 168, 4, 0.619);
-    position: relative;
-    margin-top: -150px;
-    margin-bottom: 10px;
-    z-index: -1;
-}
-
 
 .table-container {
     width: 90%;
-    height: auto;  /* Let it grow based on content */
-    background-color: #FAE3B0;  /* Shadow effect */
+    height: auto;
+    background-color: #F7F1E3;
     padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0px 15px 20px rgb(69, 69, 69); /* Soft shadow */
+    border-radius: 10px;
+    box-shadow: 0px 15px 20px rgba(69, 69, 69, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+}
+
+.text-and-table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 20px; /* Space between elements */
+}
+
+.left-text, .right-text {
+    flex: 1;
+    font-size: 20px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.left-text {
+    text-align: right;
+}
+
+.right-text {
+    color: #333333 !important;
+    font-size: 20px !important;
+    text-align: left;
+}
+
+.table-wrapper {
+    flex: 2;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.457);
+    padding: 15px;
+    background: white;
 }
 
 .skills-table {
     width: 100%;
     border-collapse: collapse;
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden;
 }
 
 .skills-table td {
-    background-color: rgb(255, 255, 255);  /* Table background */
+    background-color: #F7F1E3;
     padding: 10px;
     text-align: center;
 }
 
-.frame {
-    width: 90%;
-    height: 300px;
-    border-radius: 20%;
-    border-radius: 10px;
+.icon-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin: 0 auto;
-    margin-top: 150px; /* Add more space above the frame */
+}
+
+.table-img {
+    width: 100px;
+    height: auto;
+}
+
+
+.tab {
+    width: 100px;
+    height: 10px;
+    margin-top: 5px;
+    background-color: rgba(216, 125, 50, 0.715); /* Light transparent background */
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.projects-wrapper {
+    display: flex; /* Enables horizontal layout */
+    justify-content: space-between; /* Pushes elements to the sides */
+    align-items: center; 
+    width: 90%;
+    height: 400px;
+    padding: 20px;
+    background-color: #a8bdb3;
+    border-radius: 10px;
+    box-shadow: #333333;
     margin-bottom: 20px;
 }
 
-/*
-.frame td, th {
-    border-radius: 10px;
-    padding: 8px;
+.project-description-container {
+    flex: 2; /* Takes more space */
     text-align: left;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-*/
+.project-logo-container {
+    flex: 1; /* Takes less space */
+    display: flex;
+    justify-content: flex-end; /* Aligns logos to the right */
+}
 
-.table-img {
-    width: 300px;
-    height: 150px;
-    object-fit: cover;
+.project-logo-container img {
+    width: 300px; /* Adjust as needed */
+    height: auto;
     border-radius: 10px;
-    display: block;
-    margin: 0 auto;
+    box-shadow:rgba(97, 95, 95, 0.635);
 }
 
-/* Icons */
+.project-description-container a {
+    text-decoration: none;
+    color:  blue;
+    font-size: 20px;
+}
 
+/* Do not touch what's up there */
+
+.portfolio-wrapper {
+    display: flex; /* Enables horizontal layout */
+    justify-content: space-between; /* Pushes elements to the sides */
+    align-items: center; /* Aligns items vertically */
+    width: 90%;
+    height: 400px;
+    border-radius: 10px;
+    background-color: rgba(222, 190, 86, 0.507);
+    padding: 20px; /* Keep spacing consistent */
+    margin-bottom: 10px;    
+}
+
+.portfolio-description-container {
+    flex: 2; /* Takes more space */
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.portfolio-logo-container {
+    flex: 1; /* Takes less space */
+    display: flex;
+    justify-content: flex-end; /* Aligns logos to the right */
+}
+
+.portfolio-logo-container img {
+    width: 300px; /* Adjust as needed */
+    height: auto;
+    border-radius: 10px;
+    box-shadow:rgba(97, 95, 95, 0.635);
+}
+
+.portfolio-description-container a {
+    text-decoration: none;
+    color:  blue;
+    font-size: 20px;
+}
+
+.contact-container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(222, 190, 86, 0.507); /* Match your portfolio colors */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-container h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #a8bdb3;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #8aa296;
+}
+
+    /*dark mode*/
+
+body.dark-mode .banner {
+    background-color: #6f5119fa;
+}
+
+body.dark-mode .credentials a {
+    color: #ad945e;
+}
+
+body.dark-mode .aboutme a {
+    color: #ad945e;
+}
+
+body.dark-mode .right-text {
+    color: #ad945e !important;
+    font-size: 45px !important;
+}
+
+body.dark-mode .left-text, .right-text {
+    flex: 1;
+    font-size: 45px;
+    color: #ad945e;
+    font-weight: bold;
+}
+
+body.dark-mode .table-wrapper {
+    box-shadow: 0px 10px 15px rgba(97, 95, 95, 0.635);
+    background-color: #463b3bb1;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 15px;
+}
+
+body.dark-mode .table-container { 
+    background-color: #4b4b4bb1;
+    color: white;
+}
+
+body.dark-mode .skills-table td {  /* Icons box */    
+    background-color: #4b4b4bb1;
+    color: white;
+}
+
+body.dark-mode .background-image {
+    background-image: url('photos/DarkMode-background-image.png');
+}
+
+body.dark-mode {
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+
+/*Icons*/
 
 .fa-linkedin,
 .fa-laptop,
@@ -287,56 +436,4 @@ body.dark-mode .info p:hover {
 .fa-instagram {
     color: black;
     margin: 0;
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-body.dark-mode h1,
-body.dark-mode p {
-    color: rgb(255, 255, 255);
-}
-
-body.dark-mode .table-container {
-    background-color: #000000;
-    box-shadow: 0px 15px 20px rgba(74, 71, 71, 0.502);
-}
-
-body.dark-mode .skills-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: rgb(0, 0, 0);  /* Table background */ 
-    border-radius: 8px; /* Rounded corners */
-    overflow: hidden;
-}
-
-body.dark-mode .skills-table td {
-    background-color: rgb(27, 27, 27);  /* Table background */
-    padding: 10px;
-    text-align: center;
-}
-
-body.dark-mode .frame {
-    border-color: white;
-}
-
-body.dark-mode th {
-    background-color: rgba(85, 243, 240, 0.2);
-    color: white;
-}
-
-body.dark-mode td {
-    background-color: rgb(27, 27, 27);
-    color: white;
-}
-
-body.dark-mode .frame .fa-github,
-body.dark-mode .fa-instagram,
-body.dar-mode .fa-download,
-body.dark-mode .fa-code,
-body.dark-mode .fa-laptop {
-    color: rgb(255, 255, 255);
 }

@@ -4,154 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>gustavo-dacosta</title>
-    <link rel="icon" type="image/x-icon" href="School_ID/website logo.png">
+    <link rel="icon" type="image/x-icon" href="photos/website logo.png">
     <link rel="stylesheet" href="index.css"> 
     <script src="index.js" defer></script> 
+    <script src="server.js" defer></script>
     <script src="https://kit.fontawesome.com/e12d7b97bc.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <button id="theme-toggle">🌞 Toggle Theme 🌙</button>
-    <h1>Welcome to My Website</h1>
-    <p>Hi, I'm Gustavo, a cybersecurity and development enthusiast</p>
-    <img src="photos/GitHubprofile1.JPG" alt="Profile Photo" class="profile-photo">
-    <div class="banner"></div>
-    <div class="credentials"> <!-- section of left side in the banner -->
-        <p> 
-            <i class="fa-brands fa-linkedin"></i>
-            <a> Linkedin profile</a>
-        </p>
-        <p> 
-            <a href="https://github.com/Gustavo-DCosta" target="_blank">
-                <i class="fa-brands fa-github"></i> GitHub profile
-            </a>
-        </p>
-        <p> 
-            <i class="fa-solid fa-envelope-open-text"></i>
-            <a href="mailto:gdacostapereira66@gmail.com">gdacostapereirea66@gmailil.com</a>
-        </p>
-    </div>  <!-- THIS SECTION FURTHER UP IS ALL GOOD DO NOT TOUCH IT-->
-    <div class="aboutme"> <!-- section of right side in the banner -->
-        <p>
-            <i class="fa-solid fa-graduation-cap"></i>
-            <a>1st Year Technology and Engineering, specializing in Sustainable Development (STI2D - French Technical High School Program)<br></a>
-        </p>
-        <p>
-            <i class="fa-solid fa-user"></i>
-            <a>I am 17 years old, 11th grade</a>
-        </p>
-    </div> <!-- ALL GOOD HERE TOO DON'T TOUCH IT-->
-    <div class="SocialMedia">
-        <p> 
-            <a href="https://www.instagram.com/gustavo_dacostap" target="_blank">
-                <i class="fa-brands fa-instagram"></i> Instagram profile
-            </a>
-        </p>
-        <p>
-            <a href="https://www.facebook.com" target="_blank"">
-                <i class="fa-brands fa-facebook"></i> Facebook profile
-            </a>
-        </p>        
-        <p>
-            <i class="fa-solid fa-download"></i>
-            <a href="photos/Cv Gustavo stage4.pdf" download="Gustavo resume">Download my resume</a>
-        </p>
+    <div class="image-container">
+        <div class="background-image">
+            <img src="photos/BrightMode-background-image.png" alt="background image">
+        </div>
     </div>
-    <div class="searchbar">
-        <form action="/search" method="get">
-            <input type="text" name="query" placeholder="Search...">
-            <button type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
-    </div>    
+    <div class="navigation-bar">
+        <button id="theme-toggle">🌞 Toggle Theme 🌙</button>
+    </div>
+    <div class="banner">
+         <img src="photos/GitHubprofile1.JPG" alt="Profile Photo" class="profile-photo">
+        <div class="credentials"> <!-- section of left side in the banner -->
+            <p> 
+                <i class="fa-brands fa-linkedin"></i>
+                <a> Linkedin profile</a>
+            </p>
+            <p> 
+                <a href="https://github.com/Gustavo-DCosta" target="_blank">
+                    <i class="fa-brands fa-github"></i> GitHub profile
+                </a>
+            </p>
+            <p> 
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <a href="mailto:gdacostapereira66@gmail.com">gdacostapereira66@gmail.com</a>
+            </p>
+        </div>
+        <div class="aboutme"> <!-- section of right side in the banner -->
+            <p>
+                <i class="fa-solid fa-graduation-cap"></i>
+                <a>1st Year Technology and Engineering, specializing in Sustainable Development (STI2D - French Technical High School Program)<br></a>
+            </p>
+            <p>
+                <i class="fa-solid fa-user"></i>
+                <a>I am 17 years old, 11th grade</a>
+            </p>
+        </div>
+    </div>
     <div class="table-container">
-        <table class="skills-table">
-            <tr>
-                <td>
-                    <img src="photos/githublogo.png" class="table-img" style="width: 150px; height: 150px;">
-                </td>
-                <td>
-                    <img src="photos/VsCodelogo.jpg" class="table-img" style="width: 150px; height: 150px;">
-                </td>
-                <td>
-                    <img src="photos/CLion_logo.png" class="table-img" style="width: 150px; height: 150px;">
-                </td>
-                <td>
-                    <img src="photos/OS-Linux-icon.png" class="table-img" style="width: 150px; height: 150px;">
-                </td>
-                <td>
-                    <img src="photos/Windows.png" class="table-img" style="width: 150px; height: 150px;">
-                </td>
-                <td>
-                    <img src="photos/Vbox.png" class="table-img" style="width: 150px; height: 150px;">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="photos/C_language.png" class="table-img" style="width: 150px; height: 150px;">
-                </td>
-                <td>
-                    <img src="photos/C++_language.png" class="table-img" style="width: 150px; height: 150px;">
-                </td>
-                <td>
-                    <img src="photos/python.png" class="table-img" style="width: 150px; height: 150px;">
-                </td>
-                <td>
-                    <img src="photos/HTML.png" class="table-img" style="width: 150px; height: 150px;">
-                </td>
-                <td>
-                    <img src="photos/CSS.png" class="table-img" style="width: 150px; height: 150px;">
-                </td>
-                <td>
-                    <img src="photos/nodeJS.png" class="table-img" style="width: 250px; height: 150px;">
-                </td>
-            </tr>  
-        </table>
+        <div class="text-and-table-container">
+            <div class="left-text">
+                <p>GitHub</p>
+                <p>Visual Studio Code</p>
+                <p>CLion</p>
+                <p>Linux</p>
+                <p>Windows</p>
+                <p>VirtualBox</p>
+            </div>
+    
+            <div class="table-wrapper">
+                <table class="skills-table">
+                    <tr>
+                        <td><div class="icon-container"><img src="photos/githublogo.png" class="table-img"></div></td>
+                        <td><div class="icon-container"><img src="photos/VsCodelogo.jpg" class="table-img"></div></td>
+                        <td><div class="icon-container"><img src="photos/CLion_logo.png" class="table-img"></div></td>
+                        <td><div class="icon-container"><img src="photos/OS-Linux-icon.png" class="table-img"></div></td>
+                        <td><div class="icon-container"><img src="photos/Windows.png" class="table-img"></div></td>
+                        <td><div class="icon-container"><img src="photos/Vbox.png" class="table-img"></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="icon-container"><img src="photos/C_language.png" class="table-img"></div></td>
+                        <td><div class="icon-container"><img src="photos/C++_language.png" class="table-img"></div></td>
+                        <td><div class="icon-container"><img src="photos/python.png" class="table-img"></div></td>
+                        <td><div class="icon-container"><img src="photos/HTML.png" class="table-img"></div></td>
+                        <td><div class="icon-container"><img src="photos/CSS.png" class="table-img"></div></td>
+                        <td><div class="icon-container"><img src="photos/nodeJS.png" class="table-img" style="width: 180px;"></div></td>
+                    </tr>  
+                </table>
+            </div>
+    
+            <div class="right-text">
+                <p>C</p>
+                <p>C++</p>
+                <p>Python</p>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>NodeJS</p>
+            </div>
+        </div>
     </div>
-    <div class="frame">
-        <table>
-            <tr>
-              <th>cloudSim</th>
-              <th>Portfolio</th>
-            </tr>
-            <tr>
-              <td>CloudSim – A C++ CLI Cloud Storage App CloudSim is a cloud-based file storage system written in C++. It allows users to securely store and manage files with authentication and logging features.</td>
-              <td>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero corporis facilis enim natus ab eligendi error cupiditate placeat rem consequatur ex pariatur repellat, quaerat laboriosam in.</td>
-            </tr>
-            <tr>
-              <td>🚀 Features <br> ✅ Secure authentification features (hashing + salting)<br>
-                ✅ Log files for tracking activity<br> 
-                ✅ File storage<br>
+    <div class="projects-wrapper">
+        <div class="project-description-container">
+            <h2> cloudSim </h2>
+            <p>
+                CloudSim – A C++ CLI Cloud Storage App CloudSim is a cloud-based file storage system written in C++. It allows users to securely store and manage files with authentication and logging features.
 
-                🛠 Tech Stack C++ <br>
-                (Core development) <br>
-                SQLite3 library File I/O for storage Database content Encryption</td>
-              <td>JavaScript <br>
-                CSS <br>
-                HTML</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="https://github.com/Gustavo-DCosta/cloudSim" target="_blank">
-                        <i class="fa-brands fa-github fa-2x"></i>
-                    </a>
-                </td>
-                <td>
-                    <a href="https://github.com/Gustavo-DCosta/Gustavo-DCosta.github.io" target="_blank">
-                        <i class="fa-brands fa-github fa-2x"></i>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="photos/cloudSim logo.jpeg" alt="cloudSim logo" class="table-img">
-                </td>
-                <td>
-                    <img src="photos/TEST_IMAGE.jpg" alt="Profile Photo" class="table-img">
-                </td>
-                
-            </tr>
-        </table>
+                Originally, it was inspired by a Python spyware project I was experimenting with, but it evolved into a cloud storage solution.
+            </p>
+            <p>
+                🚀 Features <br>
+                ✅ Secure authentification features (hashing + salting) <br>
+                ✅ Log files for tracking activity <br>
+                ✅ File storage
+            </p>
+            <p>
+                🛠 Tech Stack: <br>
+                C++ (Core development) SQLite3 library File I/O for storage Database content Encryption
+            </p>
+            <p>
+                🔧 Future Improvements <br>
+                Improve Log tracking system Add files encryption for better security
+            </p>
+            <p>
+                <a href="https://github.com/Gustavo-DCosta/cloudSim" target="_blank">
+                <i class="fa-brands fa-github fa-2x"></i> Check my Github repository!
+            </a>
+            </p>
+        </div>
+        <div class="project-logo-container">
+            <img src="photos/cloudSim logo.jpeg" alt="Project Logo">
+        </div>
+    </div>
+    <div class="portfolio-wrapper">
+        <div class="portfolio-description-container">
+            <h2> My Portfolio </h2>
+            <p>
+                I did a portfolio from scracth with no experience in HTML CSS or JavaScript, and worked on it for 5 days, t'ill I had a desired output
+            </p>
+            <p>
+                🚀 Features <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, dolor magnam nobis tempora repu.
+            </p>
+            <p>
+                🛠 Tech Stack: <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque optio reprehenderit cumque quaerat animi assumenda! Neque quos aperiam exceptu
+            </p>
+            <p>
+                🔧 Future Improvements <br>
+                Improve Logihihdb  faihyfa faiofybfa
+            </p>
+            <p>
+                <a href="https://github.com/Gustavo-DCosta/" target="_blank">
+                <i class="fa-brands fa-github fa-2x"></i> Check my Github repository!
+            </a>
+            </p>
+        </div>
+        <div class="portfolio-logo-container">
+            <img src="photos/BrightMode-Portoflio.png" alt="Project Logo">
+        </div>
+    </div>
+    <div class="contact-container">
+        <h2>Contact Me</h2>
+        <form action="server.js" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Message subject" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Type your message..." rows="4" required></textarea>
+    
+            <button type="submit">Send Message</button>
+        </form>
     </div>
 </body>
-</html>
