@@ -22,7 +22,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    overflow-x: hidden;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -33,6 +35,7 @@ body {
     margin: 0;
     color: black;
     transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
 }
 
 .image-container {
@@ -130,6 +133,7 @@ body {
     padding: 10px;
     border-radius: 8px;
     text-align:center;
+    transform: translateX(100px)
 }
 
 .aboutme p {    /* #40514E */
@@ -192,12 +196,16 @@ body {
     overflow: hidden;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.457);
     padding: 15px;
+    width: 600px;
     background: white;
 }
 
 .skills-table {
-    width: 100%;
+    
+    position: relative;
     border-collapse: collapse;
+    left: -6px;
+    width: 600px;
 }
 
 .skills-table td {
@@ -213,7 +221,7 @@ body {
 }
 
 .table-img {
-    width: 100px;
+    width: 95px;
     height: auto;
 }
 
@@ -323,10 +331,10 @@ body {
     flex: 1;
     margin-right: 20px; /* Space between the two containers */
     height: auto; /* Adjust height as needed */
-    background-color: #F7F1E3;
     color: #333333;
     font-size: 24px;
     font-weight: bold;
+    margin-left: 100px;
 }
 
 .contact-container {
@@ -453,7 +461,7 @@ body.dark-mode .skills-table td {  /* Icons box */
 }
 
 body.dark-mode .background-image {
-    background-image: url('photos/DarkMode-background-image.png');
+    background-image: url('/photos/Dark-modeClsim-new.png');
 }
 
 body.dark-mode {
@@ -462,7 +470,7 @@ body.dark-mode {
 }
 
 /*Icons*/
-
+body
 .fa-linkedin,
 .fa-laptop,
 .fa-code,
@@ -477,3 +485,6 @@ body.dark-mode {
     color: black;
     margin: 0;
 }
+
+
+

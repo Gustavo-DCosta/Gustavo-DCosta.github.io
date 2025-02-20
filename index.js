@@ -1,9 +1,11 @@
 const toggleButton = document.getElementById("theme-toggle");
 const body = document.body;
-
+const backgroundImg = document.getElementById("background-img");
 // Check local storage for saved theme
 if (localStorage.getItem("theme") === "dark") {
     body.classList.add("dark-mode");
+    backgroundImg.src = "photos/dark-mode-img.png";
+    toggleButton.textContent = "🌞 Light Mode";
 }
 
 toggleButton.addEventListener("click", () => {
@@ -11,9 +13,11 @@ toggleButton.addEventListener("click", () => {
 
     // Save theme preference
     if (body.classList.contains("dark-mode")) {
+        backgroundImg.src = 'photos/dark-mode-img.png';
         localStorage.setItem("theme", "dark");
         toggleButton.textContent = "🌞 Light Mode";
     } else {
+        backgroundImg.src = 'photos/BrightMode-background-image.png';
         localStorage.setItem("theme", "light");
         toggleButton.textContent = "🌙 Dark Mode";
     }
