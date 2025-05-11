@@ -1,0 +1,28 @@
+body, html {
+    margin: 0;          /* Remove default body margin */
+    height: 100%;       /* Ensure full height */
+}
+
+.navbar {
+    background-color: #c7bca5;
+    position: fixed;
+
+    height: 50px;
+    width: 30%;
+
+    border-radius: 20px;
+    right: 10px;
+}
+
+
+.line1 {
+    position: fixed;    /* Fix the element in place on the screen */
+    width: 1px;        /* Set the width of the line */
+    height: 50%;        /* Height of the line (you can adjust this as needed) */
+    background-color: black; /* Color of the line */
+    
+    top: 50%;           /* Position it 50% from the top of the screen */
+    left: 50%;          /* Position it 50% from the left of the screen */
+    
+    transform: translate(-50%, -50%); /* Adjust it so that the center is at the 50% mark */
+}
