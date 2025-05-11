@@ -191,52 +191,25 @@ body {
 }
 
 .table-wrapper {
-    flex: 2;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.457);
-    padding: 15px;
+    flex: none; /* Empêche la div de changer de taille si elle est dans un flex parent */
     width: 600px;
-    background: white;
+    max-width: 100%; /* Évite que ça déborde */
 }
 
 .skills-table {
-    
-    position: relative;
-    border-collapse: collapse;
-    left: -6px;
-    width: 600px;
+    width: 100%; /* S'assure que la table prend toute la largeur de son conteneur */
+    table-layout: fixed; /* Empêche les colonnes de s'ajuster dynamiquement */
+    left: 0; /* Supprime le décalage */
 }
 
 .skills-table td {
-    background-color: #F7F1E3;
-    padding: 10px;
-    text-align: center;
+    word-wrap: break-word; /* Si le contenu dépasse, il passe à la ligne */
 }
-
-.icon-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.table-img {
-    width: 95px;
-    height: auto;
-}
-
 
 .tab {
-    width: 100px;
-    height: 10px;
-    margin-top: 5px;
-    background-color: rgba(216, 125, 50, 0.715); /* Light transparent background */
-    padding: 3px 8px;
-    border-radius: 5px;
-    font-size: 12px;
-    text-align: center;
+    width: auto; /* Évite de forcer une largeur qui pourrait causer des problèmes */
+    min-width: 100px; /* Assure une taille minimale cohérente */
 }
-
 .projects-wrapper {
     display: flex; /* Enables horizontal layout */
     justify-content: space-between; /* Pushes elements to the sides */
