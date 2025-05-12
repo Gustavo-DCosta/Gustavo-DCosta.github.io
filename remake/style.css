@@ -1,6 +1,6 @@
 * {
     font-family: poppins, sans-serif; /* Use Poppins font */
-    background-color: #ece2d5;
+    background-color: #F5F3F0;
 }
 
 body, html {
@@ -68,8 +68,30 @@ body, html {
 
 .setup-txt {
     position: fixed;
-    left: 35%;
+    
+    left: 40%;
     border-radius: 20px;
-    width: 65%;
+    width: 60%;
     height: 30%;
+    background: transparent; /* 🫥 makes it see-through */            /* no outline drama */
+    pointer-events: none;
+}
+
+.setup-txt h1 {
+    background: transparent;
+    text-align: center;
+}
+
+.setup-txt h2 {
+    background: transparent;
+    text-align: center;
+}
+
+.setup-txt p {
+    background: transparent;
+    text-align: center;
+}
+
+#VIEW PROJECTS {
+    border-radius: 60px;
 }
