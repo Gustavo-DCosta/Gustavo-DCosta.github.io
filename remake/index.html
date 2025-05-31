@@ -1,26 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio</title>
-</head>
-<body>
-    <div class="navbar"></div>
-    <div class="line1"></div>
+<html lang="en" class="dark">
 
-    <div class="setup-container">
-        <div class="photo-container"></div>
-        <div class="photo-caption">#Security-first developer. #Low-level enthusiast</div>
-        <div class="setup-txt"><h1>Hey, I'm Gustavo 👋</h1>
-            <h2>Back-End Developer & Security Tinkerer</h2>
-            <p>Breaking ports, building tools, and loving Go more than C</p>
-            <div class="button-row">
-                 <a href="#projects" class="view-projects">VIEW PROJECTS</a>
-                 <a href="https://github.com/Gustavo-DCosta" class="github" target="_blank">GITHUB</a>
-            </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gustavo | Backend Dev & Cybersecurity</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Toggle dark mode class based on system preference
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+</head>
+
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans">
+  <header class="p-6 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold">Hey, I’m Gustavo 👋</h1>
+    <p class="text-xl mt-2">Back-End Developer & Security Tinkerer</p>
+    <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Breaking ports, building tools, and loving Go more than C</p>
+    <div class="mt-3 flex space-x-2">
+      <span class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-1 rounded">#Security-first developer</span>
+      <span class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-1 rounded">#Low-level enthusiast</span>
     </div>
+    <div class="mt-5 space-x-4">
+      <a href="#projects" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-white font-semibold">View Projects</a>
+      <a href="https://github.com/your-github" class="underline">GitHub</a>
+    </div>
+  </header>
+
+  <section class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-2">Education</h2>
+    <p>Industrial Sciences and Technologies and Sustainable Development with a specialization in Information and Digital Systems</p>
+    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Cybersecurity Track | Coder since 2024</p>
+  </section>
+
+  <section id="projects" class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+    <ul class="list-disc list-inside space-y-2">
+      <li><strong>PulseGuard</strong> - A network monitor built with Golang and C.</li>
+      <li><strong>GoBrainz</strong> - A Golang CLI app to manage Notion workflows using custom syntax flavors and a prompt engine.</li>
+    </ul>
+  </section>
+
+  <section class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+    <p>Hello my name is Gustavo. I am a backend software engineer and a cybersecurity enthusiast.</p>
+    <p class="mt-2">I started coding back in 2024 using C++ as my first language. I love low-level stuff, because I love challenges, and I hate HTML 💩💩💩💩💩💩💩💩💩💩💩💩💩💩</p>
+    <p class="mt-2">I like cybersecurity, in particular encryption and malware development, because I love the art of secrets, and to watch the world burn with a well made malware.</p>
+    <p class="mt-2 font-medium">Fun Fact: I play tennis in a club, it’s been now 3 years.</p>
+  </section>
+
+  <section class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">Tech Stack & Tools</h2>
+    <ul class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm">
+      <li class="bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded">GitHub</li>
+      <li class="bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded">Tmux</li>
+      <li class="bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded">VSCode</li>
+      <li class="bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded">Terminal</li>
+      <li class="bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded">Golang</li>
+      <li class="bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded">C++</li>
+      <li class="bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded">C</li>
+      <li class="bg-gray-200 dark:bg-gray-700 px-3 py-2 rounded">JavaScript</li>
+    </ul>
+  </section>
+
+  <footer class="text-center text-gray-500 dark:text-gray-400 p-4">
+    &copy; 2025 Gustavo. All rights reserved.
+  </footer>
 </body>
+
 </html>
