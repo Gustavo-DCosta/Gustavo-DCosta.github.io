@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gustavo Da Costa Pereira</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="splashStyle.css">
+</head>
+<body>
+
+ 
+  <div class="deco deco-1"></div>
+  <div class="deco deco-2"></div>
+  <div class="deco deco-3"></div>
+
+  
+  <div class="change-lang" id="changeLang" onclick="resetLang()">🌐 Langue</div>
+
+  <div class="splash" id="splash">
+    <div class="splash-inner">
+
+      <div class="splash-name">Gustavo Da Costa Pereira</div>
+
+      <div class="splash-question" id="splashQuestion">
+        Dans quelle <span class="purple">langue</span> voulez-vous<br>
+        <span class="yellow">continuer</span> ?
+      </div>
+
+      <div class="lang-grid">
+        <button class="lang-btn" onclick="chooseLang('fr')">
+          <span class="lang-flag">🇫🇷</span>
+          <div>
+            <div class="lang-name">Français</div>
+            <div class="lang-native">French</div>
+          </div>
+        </button>
+        <button class="lang-btn" onclick="chooseLang('en')">
+          <span class="lang-flag">🇬🇧</span>
+          <div>
+            <div class="lang-name">English</div>
+            <div class="lang-native">Anglais</div>
+          </div>
+        </button>
+        <button class="lang-btn" onclick="chooseLang('es')">
+          <span class="lang-flag">🇪🇸</span>
+          <div>
+            <div class="lang-name">Español</div>
+            <div class="lang-native">Espagnol</div>
+          </div>
+        </button>
+        <button class="lang-btn" onclick="chooseLang('it')">
+          <span class="lang-flag">🇮🇹</span>
+          <div>
+            <div class="lang-name">Italiano</div>
+            <div class="lang-native">Italien</div>
+          </div>
+        </button>
+        <button class="lang-btn" onclick="chooseLang('pt')">
+          <span class="lang-flag">🇵🇹</span>
+          <div>
+            <div class="lang-name">Português</div>
+            <div class="lang-native">Portugais</div>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+ 
+  <div class="site" id="site">
+    <div class="site-content">
+      <div class="site-greeting" id="greeting"></div>
+      <h1 class="site-title" id="siteTitle"></h1>
+    </div>
+  </div>
+
+  <script src="../main.js"></script>
+</body>
+</html>

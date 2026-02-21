@@ -1,0 +1,84 @@
+body {
+    background-color: #e8e8e8;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.hero {
+    height: 100vh;        /* 100% de la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* ou center selon ce que tu veux */
+    padding: 20px 40px;
+}
+
+.scrollDown {
+  position: absolute;
+  top: calc(100vh - 80px);
+  left: calc(50% - 14px);
+  width: 0;
+  height: 30px;
+  border: 2px solid;
+  border-radius: 2px;
+  animation: jumpInfinite 1.5s infinite;
+}
+
+.scrollDown:after {
+  content: " ";
+  position: absolute;
+  top: 12px;
+  left: -10px;
+  width: 16px;
+  height: 16px;
+  border-bottom: 4px solid;
+  border-right: 4px solid;
+  border-radius: 4px;
+  transform: rotateZ(45deg);
+}
+
+@keyframes jumpInfinite {
+  0% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+/* CIRCLES DéCOREATIVES*/
+.deco {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.deco-1 {
+  width: 340px;
+  height: 340px;
+  background: rgba(155, 142, 196, 0.10);
+  top: -100px;
+  left: -100px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.deco-2 {
+  width: 260px;
+  height: 260px;
+  background: rgba(240, 192, 64, 0.10);
+  bottom: -80px;
+  right: -60px;
+  animation: float 10s 2s ease-in-out infinite reverse;
+}
+
+.deco-3 {
+  width: 140px;
+  height: 140px;
+  background: rgba(155, 142, 196, 0.07);
+  bottom: 20%;
+  left: 8%;
+  animation: float 12s 1s ease-in-out infinite;
+}

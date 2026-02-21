@@ -1,0 +1,262 @@
+/* ─────────────────────────────────────
+   style.css — Gustavo Da Costa Pereira
+───────────────────────────────────── */
+
+/* ── Variables ── */
+:root {
+  --bg:      #e8e8e8;
+  --purple:  #9b8ec4;
+  --yellow:  #f0c040;
+  --text:    #1a1a1a;
+  --muted:   #888888;
+  --white:   #ffffff;
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Base ── */
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* ─────────────────────────────────────
+   Decorative background circles
+───────────────────────────────────── */
+.deco {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.deco-1 {
+  width: 340px;
+  height: 340px;
+  background: rgba(155, 142, 196, 0.10);
+  top: -100px;
+  left: -100px;
+  animation: float 8s ease-in-out infinite;
+}
+
+.deco-2 {
+  width: 260px;
+  height: 260px;
+  background: rgba(240, 192, 64, 0.10);
+  bottom: -80px;
+  right: -60px;
+  animation: float 10s 2s ease-in-out infinite reverse;
+}
+
+.deco-3 {
+  width: 140px;
+  height: 140px;
+  background: rgba(155, 142, 196, 0.07);
+  bottom: 20%;
+  left: 8%;
+  animation: float 12s 1s ease-in-out infinite;
+}
+
+/* ─────────────────────────────────────
+   Change language button
+───────────────────────────────────── */
+.change-lang {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  z-index: 20;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s, color 0.2s;
+}
+
+.change-lang.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.change-lang:hover {
+  color: var(--purple);
+}
+
+/* ─────────────────────────────────────
+   Splash screen
+───────────────────────────────────── */
+.splash {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.splash.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.splash-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.splash-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  animation: fadeUp 0.6s ease both;
+}
+
+.splash-question {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  line-height: 1.3;
+  animation: fadeUp 0.6s 0.1s ease both;
+}
+
+/* ── Language buttons ── */
+.lang-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  max-width: 520px;
+  animation: fadeUp 0.6s 0.2s ease both;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  background: var(--white);
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.lang-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.lang-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Alternating purple / yellow on hover */
+.lang-btn:nth-child(odd):hover {
+  border-color: var(--purple);
+  background: rgba(155, 142, 196, 0.08);
+}
+
+.lang-btn:nth-child(even):hover {
+  border-color: var(--yellow);
+  background: rgba(240, 192, 64, 0.10);
+}
+
+.lang-flag {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.lang-name {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.lang-native {
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* ─────────────────────────────────────
+   Main site
+───────────────────────────────────── */
+.site {
+  opacity: 0;
+  pointer-events: none;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  transition: opacity 0.6s ease;
+}
+
+.site.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.site-content {
+  text-align: center;
+}
+
+.site-greeting {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.site-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+/* ─────────────────────────────────────
+   Utility colour classes
+───────────────────────────────────── */
+.purple { color: var(--purple); }
+.yellow { color: var(--yellow); }
+
+/* ─────────────────────────────────────
+   Animations
+───────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-18px); }
+}
