@@ -45,15 +45,13 @@ function applyLang(lang) {
   const t = translations[lang];
   if (!t) return;
 
-  // Update splash question
-  splashQ.innerHTML = t.splashQuestion;
-
-  // Update main site content
-  greeting.textContent  = t.greeting;
-  siteTitle.innerHTML   = t.title;
-
-  // You can add more elements here as you build your portfolio
-  // Example: document.getElementById('navProfil').textContent = t.navProfil;
+  // On cherche TOUS les éléments qui ont l'attribut data-i18n
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key]) {
+      el.innerHTML = t[key]; // Met à jour le texte (ou le HTML)
+    }
+  });
 }
 
 // ── Called when user clicks a language button ──

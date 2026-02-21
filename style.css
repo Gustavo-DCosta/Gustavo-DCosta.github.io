@@ -1,15 +1,97 @@
+:root{
+    --font-display: 'Nunito', sans-serif;
+    --font-code: 'JetBrains Mono', monospace;
+
+}
+
 body {
     background-color: #e8e8e8;
     min-height: 100vh;
     margin: 0;
 }
 
-.hero {
-    height: 100vh;        /* 100% de la hauteur de l'écran */
+.Hero {
+    position: relative;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  /* ou center selon ce que tu veux */
-    padding: 20px 40px;
+    padding: 40px 80px; /* Plus d'espace sur les côtés */
+    box-sizing: border-box;
+}
+
+/* --- Header (Nom + Nav) --- */
+.links {
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    font-family: var(--font-display);
+    font-weight: 600;
+}
+
+/* --- Slogan --- */
+.slogan {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 120px;
+    max-width: 600px;
+    line-height: 1.1;
+}
+
+/* --- Section CTA (Boutons + Texte) --- */
+.ctaContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* Style commun des boutons */
+.ctaContainer button {
+    display: block;
+    width: 250px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 12px;
+    font-family: var(--font-code);
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* Bouton PROJETS (Le premier) */
+#ProjetsButtonID { 
+    background-color: #9B8FD4; 
+    color: white;
+    margin-left: 60px; /* Position de base */
+}
+
+/* Bouton FORMATIONS (Le deuxième, décalé vers la GAUCHE) */
+#FormationsButtonID { 
+    background-color: #F5C842; 
+    color: white;
+    margin-left: -20px; /* Valeur négative pour sortir vers la gauche */
+}
+
+/* Bouton CONTACT (Le troisième, décalé vers la DROITE) */
+#ConatctButtonID { 
+    background-color: white; 
+    color: black;
+    border: 1px solid #e0e0e0;
+    margin-left: 100px; /* Pousse vers la droite */
+}
+
+
+/* Ajustement du texte à droite pour qu'il ne soit pas trop collé */
+.HeroTXT {
+    max-width: 400px;
+    text-align: left; /* Alignement à gauche comme sur l'image */
+    line-height: 1.5;
+    font-size: 1.1rem;
 }
 
 .scrollDown {
